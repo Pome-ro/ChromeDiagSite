@@ -1,0 +1,11 @@
+@mixin FlexMix($valign, $halign) {
+  display: flex;
+  align-items: $halign;
+  justify-content: $valign;
+}
+
+@mixin MakeCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

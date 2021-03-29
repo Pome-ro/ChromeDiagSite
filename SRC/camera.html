@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Test</title>
+    <link rel="stylesheet" href="css/tester.css">
+</head>
+<body>
+    <div class="main">
+        <div class="menu">
+            <div class="hero"><h1>Camera Test</h1></div>
+            <div class="nav">
+                <a href="mic.html"><img src="img/left.png" alt=""></a>
+                <a href="index.html"><img src="img/home.png" alt=""></a>
+                <a href="keyboard.html"><img src="img/Right.png" alt=""></a>
+            </div>
+            <div class="content">
+            	<video autoplay="true" id="videoElement">
+	
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+            video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+            console.log("Something went wrong!");
+            });
+        }
+    </script>
+</body>
+</html>

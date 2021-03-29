@@ -1,0 +1,151 @@
+@import "./functions";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: black;
+  text-decoration: none;
+  @include MakeCenter;
+}
+webview {
+  height: 100%;
+  width: 100%;
+}
+video {
+  width: 500px;
+  height: 375px;
+  background-color: white;
+  border: white solid 5px;
+  border-radius: 2rem;
+}
+button {
+  margin: 10px;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 2em;
+}
+textarea#styled {
+  width: 60%;
+  height: 60%;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  margin: 5px;
+  font-family: Tahoma, sans-serif;
+  font-size: 2rem;
+}
+.main {
+  min-height: 100vh;
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  @include MakeCenter;
+}
+.nav {
+  @include MakeCenter;
+  position: absolute;
+  img {
+    height: 25px;
+    width: 25px;
+  }
+}
+.menu {
+  height: 80vh;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 5;
+
+  background-color: rgb(240, 128, 128);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 2rem;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 10px 10px 28px 6px rgba(0, 0, 0, 0.29);
+
+  .hero {
+    @include MakeCenter;
+    grid-column: span 2;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    min-height: 100px;
+    background: linear-gradient(
+      to left top,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    margin: 1rem;
+  }
+  .content {
+    @include MakeCenter;
+    grid-column: span 2;
+    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
+  }
+  .option {
+    @include MakeCenter;
+    grid-column: span 1;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+
+    &--1 {
+      @extend .option;
+    }
+    &--1:hover {
+      background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    }
+    &--2 {
+      @extend .option;
+    }
+    &--2:hover {
+      background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    }
+    &--3 {
+      @extend .option;
+      border-bottom-left-radius: 2rem;
+    }
+    &--3:hover {
+      background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    }
+    &--4 {
+      @extend .option;
+      border-bottom-right-radius: 2rem;
+    }
+    &--4:hover {
+      background: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    }
+  }
+}
