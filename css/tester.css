@@ -24,6 +24,15 @@ webview {
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
+.install {
+  display: none;
+  position: absolute;
+}
+
 video {
   width: 500px;
   height: 375px;
